@@ -1,7 +1,6 @@
 import Head from "next/head";
 
-import HeaderContainer from "../components/organisms/container/header";
-import StatusContainer from "../components/organisms/container/status";
+import MainTemplate from "../components/templates/main";
 
 export default function Home() {
   return (
@@ -12,8 +11,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <HeaderContainer />
-      <StatusContainer />
+      <MainTemplate />
     </div>
   )
 }
