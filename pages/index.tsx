@@ -1,8 +1,8 @@
-import Head from "next/head";
+import Head from 'next/head'
 
-import MainTemplate from "../components/templates/main";
+import MainTemplate from '../components/templates/main'
 
-export default function Home() {
+const Home = () => {
   return (
     <div>
       <Head>
@@ -13,5 +13,7 @@ export default function Home() {
 
       <MainTemplate />
     </div>
-  )
-}
+  );
+};
+
+export default Home;

@@ -231,6 +231,11 @@
   resolved "https://registry.yarnpkg.com/@rushstack/eslint-patch/-/eslint-patch-1.0.6.tgz#023d72a5c4531b4ce204528971700a78a85a0c50"
   integrity sha512-Myxw//kzromB9yWgS8qYGuGVf91oBUUJpNvy5eM50sqvmKLbKjwLxohJnkWGTeeI9v9IBMtPLxz5Gc60FIfvCA==
 
+"@types/faker@^5.5.8":
+  version "5.5.8"
+  resolved "https://registry.yarnpkg.com/@types/faker/-/faker-5.5.8.tgz#6649adfdfdbb0acf95361fc48f2d0ca6e88bd1cf"
+  integrity sha512-bsl0rYsaZVHlZkynL5O04q6YXDmVjcid6MbOHWqvtE2WWs/EKhp0qchDDhVWlWyQXUffX1G83X9LnMxRl8S/Mw==
+
 "@types/node@*":
   version "16.4.13"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-16.4.13.tgz#7dfd9c14661edc65cccd43a29eb454174642370d"
