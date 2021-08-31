@@ -4,11 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export && yarn build-storybook",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook -c .storybook -o public"
+    "build-storybook": "build-storybook -c .storybook"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
@@ -31,6 +31,7 @@
     "@types/faker": "^5.5.8",
     "@types/react": "17.0.19",
     "babel-loader": "^8.2.2",
+    "chromatic": "^5.9.2",
     "eslint": "7.32.0",
     "eslint-config-next": "11.1.0",
     "faker": "^5.5.3",

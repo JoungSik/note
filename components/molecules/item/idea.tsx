@@ -1,13 +1,6 @@
-import React from 'react'
+import { Item } from '../../../types/item'
 
-interface IdeaProps {
-  image: string;
-  content: string;
-  title: string;
-  subTitle: string;
-}
-
-export const IdeaItem = ({ title, subTitle, content, image }: IdeaProps) => {
+export const IdeaItem = ({ title, subTitle, content, image }: Item) => {
   return (
     <div className="card">
       <img src={image} className="card-img-top" alt={content} />
