@@ -1,8 +1,7 @@
-import { useEffect, useState } from 'react'
-import faker from 'faker'
+import { useState } from 'react'
 
 import styles from '../../../styles/container/idea.module.css'
-import IdeaItem from '../../molecules/item/idea'
+import { IdeaItem } from '../../molecules/item/idea'
 
 interface item {
   id: number;
@@ -12,23 +11,8 @@ interface item {
   image: string;
 }
 
-const IdeaContainer = () => {
+export const IdeaContainer = () => {
   const [items, setItems] = useState(Array<item>(0));
-
-  useEffect(() => {
-    const temp = new Array<item>(0);
-    for (let i = 0; i < 12; i++) {
-      temp.push({
-        id: i,
-        title: `이름 - ${i}`,
-        subTitle: '소제목',
-        content: '내용',
-        image: faker.image.imageUrl(),
-      });
-    }
-    setItems(temp);
-  }, []);
-
   return (
     <section className={styles.section}>
       <div className={'container'}>
@@ -43,5 +27,3 @@ const IdeaContainer = () => {
     </section>
   )
 };
-
-export default IdeaContainer;

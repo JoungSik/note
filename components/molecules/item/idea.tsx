@@ -1,13 +1,13 @@
 import React from 'react'
 
-interface props {
+interface IdeaProps {
   image: string;
   content: string;
   title: string;
   subTitle: string;
 }
 
-const IdeaItem: React.FC<props> = ({title, subTitle, content, image}) => {
+export const IdeaItem = ({ title, subTitle, content, image }: IdeaProps) => {
   return (
     <div className="card">
       <img src={image} className="card-img-top" alt={content} />
@@ -21,5 +21,3 @@ const IdeaItem: React.FC<props> = ({title, subTitle, content, image}) => {
     </div>
   );
 };
-
-export default IdeaItem;
