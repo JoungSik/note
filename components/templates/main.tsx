@@ -1,6 +1,7 @@
 import HeaderContainer from '../organisms/container/header'
 import StatusContainer from '../organisms/container/status'
 import IdeaContainer from '../organisms/container/idea'
+import FooterContainer from "../organisms/container/footer";
 
 const MainTemplate = () => {
   return (
@@ -8,6 +9,7 @@ const MainTemplate = () => {
       <HeaderContainer />
       <StatusContainer />
       <IdeaContainer />
+      <FooterContainer />
     </>
   );
 };
