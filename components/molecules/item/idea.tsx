@@ -1,15 +1,26 @@
 import { Item } from '../../../types/item'
 
-export const IdeaItem = ({ title, subTitle, content, image }: Item) => {
+export const IdeaItem = (item: Item) => {
   return (
     <div className="card">
-      <img src={image} className="card-img-top" alt={content} />
+      <img src={item.image} className="card-img-top" alt={item.title} />
       <div className="card-body">
-        <h5 className="card-title">{title}</h5>
-        <h6 className="card-subtitle mb-2 text-muted">{subTitle}</h6>
-        <p className="card-text">{content}</p>
-        <a href="#" className="card-link">상세보기</a>
-        <a href="#" className="card-link">서비스보기</a>
+        <h5 className="card-title">{item.title}</h5>
+        <p className="card-text">{item.content}</p>
+        {
+          item.link !== undefined &&
+          <a href={item.link} className="card-link">서비스보기</a>
+        }
+        <footer className="footer fw-lighter my-2">
+          {
+            item.tags.map(tag =>
+              <>
+                <span key={tag.id} className={'text-decoration-underline'}>#{tag.name}</span>
+                {' '}
+              </>
+            )
+          }
+        </footer>
       </div>
     </div>
   );

@@ -3,6 +3,7 @@ import faker from 'faker'
 
 import { IdeaContainer } from '../../../components/organisms/container/idea'
 import { Item } from '../../../types/item';
+import { Tag } from '../../../types/tag';
 
 export default {
   title: 'Container/idea',
@@ -20,13 +21,11 @@ const Template: ComponentStory<typeof IdeaContainer> = (args) => <IdeaContainer 
 
 const temp = new Array<Item>(0);
 for (let i = 1; i < 12; i++) {
-  temp.push({
-    id: i,
-    title: `이름 - ${i}`,
-    subTitle: '소제목',
-    content: '내용',
-    image: faker.image.imageUrl(),
-  });
+  const tags = new Array<Tag>(0);
+  tags.push(new Tag(i + 1, '온라인'));
+  tags.push(new Tag(i + 2, '웹서비스'));
+
+  temp.push(new Item(i, `이름 - ${i}`, '내용', faker.image.imageUrl(), undefined, tags));
 }
 
 export const Default = Template.bind({});

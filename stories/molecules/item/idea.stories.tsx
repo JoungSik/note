@@ -2,6 +2,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import faker from 'faker';
 
 import { IdeaItem } from '../../../components/molecules/item/idea';
+import { Tag } from '../../../types/tag';
 
 export default {
   title: 'Item/idea',
@@ -22,12 +23,16 @@ export default {
   },
 } as ComponentMeta<typeof IdeaItem>;
 
+const tags = new Array<Tag>(0);
+tags.push(new Tag(1, '온라인'));
+tags.push(new Tag(2, '웹서비스'));
+
 const Template: ComponentStory<typeof IdeaItem> = (args) => <IdeaItem {...args} />
 
 export const Default = Template.bind({});
 Default.args = {
   title: `프로젝트`,
-  subTitle: '프로젝트에 대한 소제목 입니다.',
   content: '프로젝트에 대한 상세한 내용입니다.',
   image: faker.image.imageUrl(),
+  tags: tags
 };

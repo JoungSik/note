@@ -14,8 +14,8 @@ export const IdeaContainer = ({ items }: IdeaContainerProps) => {
         <div className={styles.grid_container}>
           {
             items.map((item, i) =>
-              <IdeaItem key={i} id={i}
-                        title={item.title} subTitle={item.subTitle} content={item.content} image={item.image} />)
+              <IdeaItem key={i} title={item.title} content={item.content}
+                        image={item.image} link={item.link} tags={item.tags} />)
           }
         </div>
       </div>
